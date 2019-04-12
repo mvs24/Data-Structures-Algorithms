@@ -13,11 +13,10 @@ int smallestMissingElementInSortedArray(int A[],int n){
 			}
 		}
 	}
-	for (int i = 0; i < n; ++i){
+	
 		if(k==0){
 			return A[n-1]+1;
 		}
-	}
 	return k;
 }
 int main(int argc, char const *argv[])
