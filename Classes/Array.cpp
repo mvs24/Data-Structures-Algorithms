@@ -1,12 +1,11 @@
 #include <iostream>
 #include "Array.h"
 using namespace std;
-	Array::Array(int numri){
-		this->n=numri;
+	Array::Array(int number){
+		this->n=number;
 	}
  bool Array::member(int A[],int k){
- 	for (int i = 0; i < n; ++i)
- 	{
+ 	for (int i = 0; i < n; ++i){
  		if(A[i]==k){
  			return true;
  		}
@@ -16,10 +15,8 @@ using namespace std;
 
 	int Array::greaterThan(int A[],int k){
 		int counter=0;
-		for (int i = 0; i < n; ++i)
-		{
-			if (A[i]>k)
-			{
+		for (int i = 0; i < n; ++i){
+			if (A[i]>k){
 				counter++;
 			}
 		}
@@ -28,12 +25,9 @@ using namespace std;
 	
 
 	void Array::remove(int A[],int k){
-		for (int i = 0; i <n-1; ++i)
-		{
-			if (A[i]==k)
-			{
-				for (; i <n-1 ; ++i)
-				{
+		for (int i = 0; i <n-1; ++i){
+			if (A[i]==k){
+				for (; i <n-1 ; ++i){
 					A[i]=A[i+1];
 				}
 			
@@ -42,8 +36,7 @@ using namespace std;
 	}
 
 	bool Array::ordering(int A[]){
-		for (int i = 0; i < n-1; ++i)
-		{
+		for (int i = 0; i < n-1; ++i){
 			if(A[i]>A[i+1]){
 				 return false;
 			}
