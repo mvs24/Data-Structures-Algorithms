@@ -5,14 +5,11 @@ using namespace std;
 
 template <class T>
 class List_Vektor
-{
-
-    
+{ 
 public:
     typedef T value_type; // tip i te dhenave T qe ruhet ne liste
     typedef int position;
     // konstruktori
-
     List_Vektor();
     List_Vektor(int);
     // konstruktori i kopies
@@ -20,8 +17,6 @@ public:
     //destruktori
     ~List_Vektor();
     // veprimet
-
-
 
 
     void create();
@@ -41,6 +36,11 @@ public:
     List_Vektor<T> &operator=(const List_Vektor<T> &); // operatori i
 
     bool operator==(const List_Vektor<T> &) const; // krahason dy lista nqs
+
+
+    List_Vektor<T> concat(List_Vektor<T> &);
+
+    List_Vektor<T> unionIntersection(List_Vektor<T> &);
 
 
     private:
