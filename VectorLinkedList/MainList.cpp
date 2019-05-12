@@ -8,7 +8,6 @@ int main()
     int x;
     /* shtimi i tre elementeve ne list1 */
     x = 1;
-    
     list1.insert(x, list1.begin());
     x = 2;
     list1.insert(x, list1.begin());
@@ -57,14 +56,41 @@ int main()
 
     // list2.duplicate();
     // list1.duplicateList(list2);
-    List_Vektor<int> list3;
-      list3.insert(5, list3.begin());
-      list3.insert(4, list3.begin());
-      list3.insert(4, list3.begin());
-      list3.insert(8, list3.begin());
-      list3.insert(1, list3.begin());
-      list1.print();
-      list3.print();
+    int n,y;
+    cout<<"Jep numrin e elementeve te listes se re";
+    cin>>n;
 
-      list1.duplicateList(list3);
+    List_Vektor<int> list3;
+
+    for (int i = 0; i < n; ++i)
+    {
+        cin>>y;
+        list3.insert(y, list3.begin());
+    }
+
+      // list1.duplicateList(list3);
+
+
+
+      // List_Vektor<int> ConcatList=list1.concat(list3);
+      // ConcatList.print();
+      // List_Vektor<int> list5,list6;
+      //  list5.insert(8, list5.begin());
+      //  list5.insert(7, list5.begin());
+
+      //  list5.insert(5, list5.begin());
+      //  list5.insert(4, list5.begin());
+      //  list5.insert(3, list5.begin());
+      //  list5.insert(1, list5.begin());
+
+      //  list6.insert(6, list6.begin());
+      //  list6.insert(4, list6.begin());
+      //  list6.insert(3, list6.begin());
+      //  list6.insert(2, list6.begin());
+
+      // List_Vektor<int> UnionIntersection=list5.unionIntersection(list6);
+      // UnionIntersection.print();
+
+
+
 }
