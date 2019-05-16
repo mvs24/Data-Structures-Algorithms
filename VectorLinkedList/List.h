@@ -39,10 +39,7 @@ public:
 
 
     List_Vektor<T> concat(List_Vektor<T> &);
-
-    List_Vektor<T> unionIntersection(List_Vektor<T> &);
-
-
+    
     private:
     void change_dimension_(T *&, int, int);
     value_type *elements_;
