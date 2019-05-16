@@ -207,50 +207,19 @@ void List_Vektor<T>::duplicate(){
 }
 
 template<class T>
-void List_Vektor<T>::duplicateList(List_Vektor<T> &t){
-    int k=0;
-    int A[10];
-    
+void List_Vektor<T>::duplicateList(List_Vektor<T> &t){ 
     for (int i = 0; i < length_; ++i)
     {
-        for (int j = 0; j < t.length_; ++j)
+            for (int j = 0; j < t.length_; ++j)
             {
                 if(elements_[i]==t.elements_[j]){
-
-                     // cout<<elements_[i]<<" "<<endl;
-                    A[k++]=elements_[i];
+                      cout<<elements_[i]<<" "<<endl;
                 }
             }    
-    }
-
-    // for (int i = 0; i < k; ++i)
-    // {
-    //     cout<<A[i]<<endl;
-    // }
-  // [1,4,4,4,1]
-    for (int i = 0; i < k-1; ++i)
-    {
-     int counter=0;
-        for (int j = i+1; j < k; ++j)
-        {
-           
-            if(A[i]==A[j]){
-             counter++;
-             if(counter==1){
-                cout<<A[i]<<endl;
-             }
-               
-            }
-        }
-    }
-  
+    }  
 }
 
 
-
-// [1,2,2,7,4,4,3]
-// [1,8,9]
-// [....]
 template<class T>
 List_Vektor<T> List_Vektor<T>::concat(List_Vektor<T> &l){
     List_Vektor<T> temp;
@@ -267,38 +236,6 @@ List_Vektor<T> List_Vektor<T>::concat(List_Vektor<T> &l){
     {
         temp.elements_[i]=l.elements_[j];
         j++;
-    }
-    return temp;
-}
-
-
-// [1, 3, 4, 5, 7]
-// [2, 3, 5, 6]
-
-// [1, 2, 3, 4, 5, 6, 7]
-// [3, 5]
-template<class T>
-List_Vektor<T> List_Vektor<T>::unionIntersection(List_Vektor<T> &l){
-    List_Vektor<T> temp;
-    temp.array_dimension_=array_dimension_+l.array_dimension_;
-    temp.length_=length_+l.length_;
-    temp.elements_=new T[array_dimension_];
-    int i=0,j=0,k=0;
-    while(i<length_ && j<l.length_){
-        if(elements_[i]<l.elements_[j]){
-            temp.elements_[k++]=elements_[i++];
-        }else if(elements_[i]>l.elements_[j]){
-            temp.elements_[k++]=l.elements_[j++];
-        }else if(elements_[i]==l.elements_[j]){
-            temp.elements_[k++]=elements_[i];
-            i++;
-            j++;
-        }
-        // else if(j==l.length){
-        //     temp.elements_[k++]=elements_[i++];
-        // }else if(i==length_){
-        //     temp.elements_[k++]=l.elements_[j++];
-        // }
     }
     return temp;
 }
