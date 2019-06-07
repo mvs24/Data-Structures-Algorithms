@@ -173,11 +173,7 @@ void Tree::Levelorder(struct Node *root)
 
  // int Tree::maxElement(struct Node *root){
  //     if (root == NULL)  
- //    return INT_MIN;  
-  
- //    // Return maximum of 3 values:  
- //    // 1) Root's data 2) Max in Left Subtree  
- //    // 3) Max in right subtree  
+ //    return INT_MIN;   
  //    int res = root->data;  
  //    int lres = maxElement(root->lchild);  
  //    int rres = maxElement(root->rchild);  
